@@ -1,11 +1,4 @@
-/*
-*********************************************************
-*							*
-*	Author :  Aniket : IvLabs                       *
-*                 Radha                                 *
-*							*
-*********************************************************
-*/
+
 
 #include "opencv2/objdetect/objdetect.hpp"
 #include "opencv2/highgui/highgui.hpp"
@@ -16,7 +9,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <math.h>
-#include <cmath>
 #include <stdlib.h>
 #include "Pose.h"
 #include "Image_Processing.h"
