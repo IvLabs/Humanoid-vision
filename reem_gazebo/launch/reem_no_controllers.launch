@@ -1,0 +1,20 @@
+<launch>
+
+  <!-- Send REEM urdf to param server -->
+  <include file="$(find reem_description)/robots/upload_reem.launch" />
+
+  <!-- Robot model to spawn -->
+  <arg name="use_rgbd_sensor" value="$(optenv USE_RGBD_SENSOR false)" />
+  <arg if="$(arg use_rgbd_sensor)"     name="gzmodel" value="reem_rgbd_description/reem_rgbd.urdf"/>
+  <arg unless="$(arg use_rgbd_sensor)" name="gzmodel" value="reem_description/reem.urdf"/>
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <arg name="gzpose"  default="-x 0 -y 0 -z 0.0 -R 0.0 -P 0.0 -Y 0.0"/>
+  <arg name="gzworld" default="empty.world"/>
+  <node name="gzfactory" pkg="reem_gazebo" type="run_gzfactory" args="spawn -f $(find reem_gazebo)/models/$(arg gzmodel) $(arg gzpose)" output="screen" />
+
+  <!-- default bringup script -->
+  <include file="$(find reem_gazebo)/launch/reem_bringup.launch" />
+
+</launch>
+

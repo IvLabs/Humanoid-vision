@@ -1,0 +1,7 @@
+build
+models/reem_description/meshes
+models/reem_description/reem.urdf
+models/reem_rgbd_description/reem_rgbd.urdf
+models/reem_arm_description/reem_arm.urdf
+models/reem_head_description/reem_head.urdf
+models/reem_upper_body_description/reem_upper_body.urdf
