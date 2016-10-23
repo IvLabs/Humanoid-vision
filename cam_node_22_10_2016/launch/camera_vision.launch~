@@ -1,0 +1,5 @@
+<!--xml-->
+<launch>
+  <node name="main" pkg="cam_node" type="cam_node" />
+
+</launch>
