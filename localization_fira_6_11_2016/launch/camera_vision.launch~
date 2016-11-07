@@ -1,0 +1,3 @@
+<launch>
+  <node name="main" pkg="cam_node" type="main" />
+</launch>
