@@ -4,6 +4,7 @@
        to connect to an OpenNI device (e.g. Kinect). 
   -->
   <node pkg="apriltags" type="apriltags" name="apriltags" output="screen">
+
     <param name="~default_tag_size" value="0.073" />
 
     <param name="~viewer" value="false" />

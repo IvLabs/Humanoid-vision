@@ -1,0 +1,4 @@
+<launch>
+<node name="image_proc" pkg="image_proc" ROS_NAMESPACE="camera" />
+
+</launch>
